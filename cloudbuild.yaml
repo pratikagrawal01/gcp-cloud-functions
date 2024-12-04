@@ -5,7 +5,7 @@ steps:
       - functions
       - deploy
       - user-function-build
-      - --entry-point=functions.PubSubFunction
+      - --entry-point=function.PubSubFunction
       - --region=us-central1
       - --source=.
       - --trigger-http
@@ -15,4 +15,5 @@ steps:
       - --min-instances=0
       - --max-instances=1
       - --allow-unauthenticated
+      - --service-account=bf-cloud-sa@primordial-veld-442819-k2.iam.gserviceaccount.com
       - --quiet
