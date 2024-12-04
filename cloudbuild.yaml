@@ -1,0 +1,18 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - user-function-build
+      - --entry-point=functions.webhooklistner
+      - --region=us-central1
+      - --source=.
+      - --trigger-http
+      - --runtime=java17
+      - --memory=512MB
+      - --timeout=90
+      - --min-instances=0
+      - --max-instances=1
+      - --allow-unauthenticated
+      - --quiet
