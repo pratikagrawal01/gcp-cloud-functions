@@ -5,7 +5,7 @@ steps:
       - functions
       - deploy
       - user-function-build
-      - --entry-point=functions.webhooklistner
+      - --entry-point=functions.PubSubFunction
       - --region=us-central1
       - --source=.
       - --trigger-http
