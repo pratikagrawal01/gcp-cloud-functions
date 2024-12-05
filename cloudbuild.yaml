@@ -14,7 +14,7 @@ steps:
       - '-c'
       - |
           gcloud functions deploy PublishMessage \
-          --verbosity debug
+          --verbosity debug \
           --runtime java17 \
           --trigger-http \
           --allow-unauthenticated \
