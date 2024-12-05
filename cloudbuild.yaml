@@ -14,13 +14,11 @@ steps:
       - '-c'
       - |
           gcloud functions deploy PublishMessage \
-          --verbosity debug \
           --runtime java17 \
           --trigger-http \
           --allow-unauthenticated \
           --source=target \
           --entry-point=functions.PublishMessage \
-          --timeout 1200s \
           --region=us-central1
 
 timeout: 1200s
