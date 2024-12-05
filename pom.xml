@@ -7,7 +7,9 @@
  <name>GCP Webhook-pubsub Function</name>
 
  <properties>
-  <maven.compiler.release>17</maven.compiler.release>
+	 <java.version>17</java.version>
+	 <maven.compiler.source>17</maven.compiler.source>  <!-- Set the source to Java 17 -->
+	 <maven.compiler.target>17</maven.compiler.target>
  </properties>
 
  <dependencies>
