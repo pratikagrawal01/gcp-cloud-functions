@@ -25,10 +25,8 @@ artifacts:
     paths:
       - target/**
       
-# Substitutions for parameterizing build details
-substitutions:
-  _PUBSUB_TOPIC: "bf-webhook"
-  _GCP_PROJECT: "primordial-veld-442819-k2"
+    
+timeout: 1200s
 
 options:
   logging: CLOUD_LOGGING_ONLY
