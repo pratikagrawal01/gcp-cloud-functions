@@ -1,0 +1,24 @@
+steps:
+  - name: 'maven:3.8-jdk-11'
+    id: 'Build with Maven'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+          mvn clean install -DskipTests
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Cloud Function'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+          gcloud functions deploy YOUR_FUNCTION_NAME \
+          --runtime java17 \
+          --trigger-http \
+          --allow-unauthenticated \
+          --source=target \
+          --entry-point=functions.PublishMessage \
+          --region=us-central1
+
+timeout: 1200s  # Optional, you can increase the timeout if needed
