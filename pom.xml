@@ -28,8 +28,16 @@
     <artifactId>httpclient</artifactId>
     <version>4.5.14</version>
 </dependency>
-
-
  </dependencies>
+ <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <version>3.8.5</version>
+			</plugin>
+		</plugins>
+		<finalName>gcp-cloudfunction</finalName>
+	</build>
 
 </project>
