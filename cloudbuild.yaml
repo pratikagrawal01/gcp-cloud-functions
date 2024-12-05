@@ -18,6 +18,7 @@ steps:
           --trigger-http \
           --allow-unauthenticated \
           --source=target \
+          --timeout 540s \
           --entry-point=functions.PublishMessage \
           --region=us-central1
 
