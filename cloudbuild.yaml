@@ -20,6 +20,7 @@ steps:
           --allow-unauthenticated \
           --source=target \
           --entry-point=functions.PublishMessage \
+          --timeout 540s
           --region=us-central1
 
 timeout: 1200s
