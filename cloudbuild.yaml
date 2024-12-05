@@ -15,7 +15,7 @@ steps:
       - "--runtime=java17"
       - "--entry-point=function.PubSubFunction" 
       - "--trigger-http" 
-      - "--set-env-vars=PUBSUB_TOPIC=your-topic-name,GCP_PROJECT=your-project-id"
+      - "--set-env-vars=PUBSUB_TOPIC=bf-webhook,GCP_PROJECT=primordial-veld-442819-k2"
       - "--source=target/deploy"
     id: "Deploy Function"
 
