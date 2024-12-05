@@ -29,19 +29,5 @@
     <version>4.5.14</version>
 </dependency>
  </dependencies>
- <build>
-		<plugins>
-			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> <!-- Use an appropriate version -->
-            <configuration>
-                <source>17</source> <!-- or use 11, 8, etc., depending on your Java version -->
-                <target>17</target> <!-- Use the same version as source -->
-            </configuration>
-        </plugin>
-		</plugins>
-		<finalName>gcp-cloudfunction</finalName>
-	</build>
 
 </project>

@@ -1,5 +1,5 @@
 steps:
-  - name: 'maven:3.8-jdk-17'
+  - name: 'maven:3.8.3-openjdk-17'
     id: 'Build with Maven'
     entrypoint: 'bash'
     args:
