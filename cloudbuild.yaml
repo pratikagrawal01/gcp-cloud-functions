@@ -13,7 +13,7 @@ steps:
     args:
       - '-c'
       - |
-          gcloud functions deploy YOUR_FUNCTION_NAME \
+          gcloud functions deploy PublishMessage \
           --runtime java17 \
           --trigger-http \
           --allow-unauthenticated \
@@ -21,4 +21,7 @@ steps:
           --entry-point=functions.PublishMessage \
           --region=us-central1
 
-timeout: 1200s  # Optional, you can increase the timeout if needed
+timeout: 1200s
+
+options:
+  logging: CLOUD_LOGGING_ONLY
