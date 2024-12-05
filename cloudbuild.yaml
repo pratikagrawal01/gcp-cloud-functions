@@ -16,14 +16,14 @@ steps:
       - "--entry-point=function.PubSubFunction" 
       - "--trigger-http" 
       - "--set-env-vars=PUBSUB_TOPIC=bf-webhook,GCP_PROJECT=primordial-veld-442819-k2"
-      - "--source=target/deploy"
+      - "--source=target"
     id: "Deploy Function"
 
 artifacts:
   objects:
     location: gs://bf-cloud-functions-storage/cloud-functions/
     paths:
-      - target/deploy/**
+      - target/**
       
 # Substitutions for parameterizing build details
 substitutions:
