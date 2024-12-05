@@ -19,6 +19,12 @@ steps:
       - "--source=target/deploy"
     id: "Deploy Function"
 
+artifacts:
+  objects:
+    location: gs://bf-cloud-functions-storage/cloud-functions/
+    paths:
+      - target/deploy/**
+      
 # Substitutions for parameterizing build details
 substitutions:
   _PUBSUB_TOPIC: "bf-webhook"
